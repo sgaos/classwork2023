@@ -17,15 +17,15 @@ def interface():
     
     
 def HDL_driver():
-    HDL_in = HDL_input()
+    HDL_in = generic_input("HDL")
     HDL_analy = HDL_analysis(HDL_in)
     HDL_output(HDL_in, HDL_analy)
     
 
-def HDL_input():
-    HDL_value = input("Enter the HDL result:")
-    HDL_value = int(HDL_value)
-    return HDL_value
+def generic_input(test_name):
+    value = input ("Enter the {} value: ".format(test_name))
+    value = int(value)
+    return value
     
     
 def HDL_analysis(HDL_int):
@@ -44,16 +44,9 @@ def HDL_output(HDL_value, HDL_analy):
 
 
 def LDL_driver():
-    LDL_in = LDL_input()
+    LDL_in = generic_input("LDL")
     LDL_analy = LDL_analysis(LDL_in)
     LDL_output(LDL_in, LDL_analy)
-    
-
-def LDL_input():
-    LDL_value = input("Enter the LDL result:")
-    LDL_value = int(LDL_value)
-    return LDL_value
-    
     
 def LDL_analysis(LDL_int):
     if LDL_int >= 190:

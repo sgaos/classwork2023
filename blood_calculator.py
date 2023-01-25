@@ -58,6 +58,9 @@ def LDL_analysis(LDL_int):
     return answer
     
     
+def LDL_output(LDL_value, LDL_analy):
+    print("The LDL result of {} is considered {}".format(LDL_value, LDL_analy))
+    return
     
 
 interface()

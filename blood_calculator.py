@@ -38,6 +38,12 @@ def HDL_analysis(HDL_int):
 def HDL_output(HDL_value, HDL_analy):
     print("The HDL result of {} is considered {}".format(HDL_value, HDL_analy))
     return
+
+
+def LDL_input():
+    LDL_value = input("Enter the LDL result:")
+    LDL_value = int(LDL_value)
+    return LDL_value
     
     
 

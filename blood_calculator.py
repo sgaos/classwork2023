@@ -52,7 +52,7 @@ def LDL_driver():
     LDL_analy = LDL_analysis(LDL_in)
     generic_output("LDL", LDL_in, LDL_analy)
 
-    
+
 def LDL_analysis(LDL_int):
     if LDL_int >= 190:
         answer = "Very High"
@@ -70,6 +70,7 @@ def total_driver():
     total_analy = total_analysis(total_in)
     generic_output("Total Cholesterol", total_in, total_analy)
 
+
 def total_analysis(total_int):
     if total_int >= 240:
         answer = "High"
@@ -78,7 +79,6 @@ def total_analysis(total_int):
     else:
         answer = "Normal"
     return answer
-
 
 
 if __name__ == "__main__":

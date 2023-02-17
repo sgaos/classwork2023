@@ -19,8 +19,9 @@ def main():
     except ValueError:
         print("You must send a positive number")
         answer = ""
-    except:
-        print("All errors")
+    # The bare except clause is commented out to pass PEP-8
+    # except:
+    #     print("All errors")
     print(answer)
 
 

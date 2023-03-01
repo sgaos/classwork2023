@@ -2,3 +2,4 @@ jupyter
 pytest
 pytest-pycodestyle
 requests
+flask

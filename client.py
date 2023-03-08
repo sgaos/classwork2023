@@ -19,10 +19,9 @@ print(r.json())
 
 
 out_data = {"a": 2, "b": -3}
-r = requests.post(server + "/add", json = out_data)
+r = requests.post(server + "/add", json=out_data)
 print(r.status_code)
 print(r.text)
 if r.status_code == 200:
     x = r.json()
     print(x + 2)
-

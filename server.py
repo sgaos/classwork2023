@@ -41,7 +41,5 @@ def add_two_handlere(a, b):
     return jsonify(answer)
 
 
-
-
 if __name__ == '__main__':
     app.run()

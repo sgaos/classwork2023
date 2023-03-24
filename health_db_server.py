@@ -70,7 +70,7 @@ def add_test_to_db(patient_id, test_name, test_value):
     Returns:
         None
     """
-    db[patient_id]["tests"].appends((test_name, test_value))
+    db[patient_id]["tests"].append((test_name, test_value))
     print(db)
 
 

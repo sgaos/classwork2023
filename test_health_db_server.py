@@ -1,3 +1,20 @@
+from pymodm import connect
+from PatientModel import Patient
+
+connect("mongodb+srv://daw_spring:daw_spring@bme547.ba348.mongodb.net/"
+        "health_db_2023?retryWrites=true&w=majority")
+
+def test_add_patient_to_db():
+    from health_db_server import add_patient_to_db
+    patient_id = 234
+    patient_name = "Test"
+    blood_type = "O+"
+    answer = add_patient_to_db(patient_id, patient_name, blood_type)
+    x = Patient.objects.raw({"_id": patient_id}).first()
+    x.delete()
+    assert answer.patient_id == patient_id
+
+
 def test_add_test_to_db():
     from health_db_server import add_test_to_db
     # Arrange
